@@ -1,0 +1,38 @@
+<p>
+  edit-hero works!
+</p>
+<div *ngIf="!wanttoadd">
+  <div>
+    <label>name:
+      <input  [(ngModel)]="hero.name" placeholder="name">
+    </label>
+  </div>
+  
+  <div>
+    <label>rating:
+      <input  [(ngModel)]="hero.rating" placeholder="rating">
+    </label>
+  </div>
+</div >
+<div *ngIf="wanttoadd">
+  <div>
+    <label>id:
+      <input [(ngModel)] = "addedHero.id" >
+    </label>
+  </div>
+  
+  <div>
+    <label>name:
+      <input [(ngModel)] = "addedHero.name" >
+    </label>
+  </div>
+  
+  <div>
+    <label>rating:
+      <input  [(ngModel)]="addedHero.rating" >
+    </label>
+  </div>
+</div>
+  
+<button (click) ='toadd()'>Add</button>
+<button (click)='deleteHero()'>Delete</button>
